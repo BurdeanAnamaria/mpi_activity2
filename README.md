@@ -1,21 +1,16 @@
-# SAT Solver Comparison
-
-This repository contains the implementation and experimental evaluation of SAT solving algorithms: Resolution, Davis-Putnam (DP), and Davis-Putnam-Logemann-Loveland (DPLL).
-
-## Contents
-- `src/`: Python implementations of SAT solvers
-- `data/`: CNF benchmark files (DIMACS format)
-- `results/`: Output from experimental runs (e.g., CSVs)
-- `figures/`: Optional plots or visuals
+# SAT Solver
+This is a simple SAT solver implementation in Python using:
+- Resolution
+- Davis-Putnam (DP)
+- Davis-Putnam-Logemann-Loveland (DPLL)
 
 ## Usage
-```bash
-cd src
-python dpll_solver.py ../data/sample.cnf
+Each algorithm is in its own file:
+- `resolution.py`
+- `dp.py`
+- `dpll.py`
+
+CNF formulas are represented as lists of clauses:
+```python
+cnf = [[1, -2, 3], [-1, 2], [3]]
 ```
-
-## Paper Link
-See the paper for theoretical background and detailed analysis.
-
-## License
-MIT License
