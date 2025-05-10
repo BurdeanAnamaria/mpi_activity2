@@ -44,7 +44,6 @@ def dp(clauses, assignment):
         if l not in assignment:
             break
 
-    # Try assigning True
     new_assignment = assignment.copy()
     new_assignment[l] = True
     simplified = simplify(clauses, l)
@@ -52,7 +51,6 @@ def dp(clauses, assignment):
     if result is not None:
         return result
 
-    # Try assigning False
     new_assignment = assignment.copy()
     new_assignment[l] = False
     simplified = simplify(clauses, -l)
