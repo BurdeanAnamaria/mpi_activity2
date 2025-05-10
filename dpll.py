@@ -70,19 +70,17 @@ class Solver:
                 temp=[]
                 t.remove(item)
                 t.append([x for x in item if x != -v])
-        #print ("After Reduced",len(self.cnf_l),"\n",cnf)
         return t
         
     
     def most_common(self,lst):
-        merged = list(itertools.chain(*lst))      #most frequent item
+        merged = list(itertools.chain(*lst))     
         if len(merged)>0:
             return max(set(merged), key=merged.count)
         else:
-            self.ou=True     #length of senetence is 0
+            self.ou=True    
 
 if __name__ == "__main__":
-    # Example from the LaTeX document
     cnf = [[1, -2, 3], [-1, 2], [3]]
     solver = Solver(cnf)
     print("Satisfiable:", solver.solve())
