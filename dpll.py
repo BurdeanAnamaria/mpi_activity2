@@ -83,4 +83,8 @@ class Solver:
 if __name__ == "__main__":
     cnf = [[1, -2, 3], [-1, 2], [3]]
     solver = Solver(cnf)
-    print("Satisfiable:", solver.solve())
+    result = solver.solve()
+    if result:
+        print("SATISFIABLE")
+    else:
+        print("UNSATISFIABLE")
